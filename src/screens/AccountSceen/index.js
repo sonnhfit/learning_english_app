@@ -50,7 +50,7 @@ class AccountPoint extends PureComponent {
                 flex: 1, 
                 flexDirection: "row", 
                 justifyContent: "space-around",
-                marginTop: 50
+                marginTop: 20
                 }}>
                 
               <View>
@@ -89,12 +89,76 @@ class AccountItem extends PureComponent {
                 flex: 1, 
                 flexDirection: "row", 
                 justifyContent: "space-around",
-                marginTop: 50
+                
                 }}>
                 
-              
+                <View>
+              <Text style={styles.textPoint, styles.myorder}>
+              <Icon name={'redeem'} size={40} />
+              </Text>
+              <Text style={styles.myorderText, styles.colorTextSmall}>Integral</Text>
+              </View>
+              <View>
+              <Text style={styles.textPoint, styles.myorder}>
+              <Icon name={'monetization-on'} size={40} />
+              </Text>
+              <Text style={styles.myorderText, styles.colorTextSmall}>Integral</Text>
+              </View>
+              <View>
+              <Text style={styles.textPoint, styles.myorder}>
+              <Icon name={'card-membership'} size={40} />
+              </Text>
+              <Text style={styles.myorderText, styles.colorTextSmall}>Integral</Text>
+              </View>
+              <View>
+              <Text style={styles.textPoint, styles.myorder}>
+              <Icon name={'local-florist'} size={40} />
+              </Text>
+              <Text style={styles.myorderText, styles.colorTextSmall}>Integral</Text>
+              </View>
             </View>
-            
+        );
+    }
+}
+
+class ItemList extends PureComponent {
+    render() {
+        return (
+                <View style={{ paddingLeft: 20, paddingRight: 20, paddingTop: 10 }}>
+                    <View  style={styles.listItem}>
+                        <Image
+                        style={styles.listItemImage}
+                        source={require('../../asset/user.png')}
+                        />
+                        <Text style={styles.listItemText}>{this.props.name}</Text>
+                        <Icon name="keyboard-arrow-right" style={styles.listItemArrow}></Icon>
+                    </View>
+                </View>
+        );
+    }
+}
+
+
+class AccountOptionList extends PureComponent {
+    render() {
+        return (
+            <View style={{
+                flex: 1, 
+                flexDirection: "column",
+                justifyContent: "space-around",
+                marginTop: 40,
+                }}>
+                <ItemList name='My warranty'></ItemList>
+                <ItemList name='Shipping address'></ItemList>
+                <ItemList name='My post'></ItemList>
+                <ItemList name='My money'></ItemList>
+                <ItemList name='invite friends'></ItemList>
+                <ItemList name='About us'></ItemList>
+               
+    
+                
+             
+            </View>
         );
     }
 }
@@ -107,7 +171,27 @@ class AccountScreen extends PureComponent {
         <ScrollView>
             <AccountHeader></AccountHeader>
             <AccountPoint></AccountPoint>
+            <View style={{
+                    marginTop: 50,
+                    flex: 1,
+                    flexDirection: "row"
+                }}>
+                <Text style={{
+                    flex: 2,
+                    fontWeight: "bold",
+                    marginLeft: 20,
+                    marginBottom: 15
+                    }}>My order</Text>
+                <Text style={{
+                    fontSize: 12,
+                    flex: 6,
+                    textAlign: "right",
+                    paddingRight: 10,
+                    color: "#a6aeca"
+                    }}>more</Text>
+            </View>
             <AccountItem></AccountItem>
+            <AccountOptionList></AccountOptionList>
         </ScrollView>
         </SafeAreaView>
     
@@ -120,6 +204,34 @@ const styles = StyleSheet.create({
         fontSize: 22,
         fontWeight: "bold", 
         color: "#0d0d3f"
+    },
+    myorder: {
+        paddingLeft: 10
+    },
+    myorderText: {
+        paddingLeft: 5
+    },
+    colorTextSmall: {
+        color: "#747a83"
+    },
+    listItemImage: {
+        width: 20, height: 20
+    },
+    listItem: {
+        flex: 1,
+        flexDirection: "row",
+        height: 40, 
+        paddingTop: 5,
+        borderBottomColor: "#ccc",
+        borderBottomWidth: 0.5
+    },
+    listItemText: {
+        flex: 5, paddingLeft: 10, paddingTop: 2
+    },
+    listItemArrow: {
+        flex: 1,
+        paddingTop: 2, 
+        textAlign: "right"
     }
 });
 export default AccountScreen;
