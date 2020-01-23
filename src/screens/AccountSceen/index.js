@@ -167,8 +167,8 @@ class AccountOptionList extends PureComponent {
 class AccountScreen extends PureComponent {
   render() {
     return (
-        <SafeAreaView>
-        <ScrollView>
+        <SafeAreaView style={{backgroundColor: "#fff"}}>
+        <ScrollView >
             <AccountHeader></AccountHeader>
             <AccountPoint></AccountPoint>
             <View style={{
@@ -192,6 +192,7 @@ class AccountScreen extends PureComponent {
             </View>
             <AccountItem></AccountItem>
             <AccountOptionList></AccountOptionList>
+            <View style={{height: 150}}></View>
         </ScrollView>
         </SafeAreaView>
     

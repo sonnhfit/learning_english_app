@@ -3,6 +3,7 @@ import { createStackNavigator } from 'react-navigation-stack'
 import LoginScreen from '../screens/LoginScreen';
 import HomeScreen from '../screens/HomeScreen';
 import AccountScreen from '../screens/AccountSceen';
+import CourseScreen from '../screens/CourseScreen';
 
 import React from 'react';
 import { Button, Text, View } from 'react-native';
@@ -33,7 +34,7 @@ class Home1Screen extends React.Component {
 const AuthenticationNavigator = createBottomTabNavigator(
   {
       Home: { screen: Home1Screen },
-      'Học tập': { screen: SettingsScreen },
+      'Học tập': { screen: CourseScreen },
       'Cùng bạn': { screen: SettingsScreen },
       'Tài khoản': { screen: AccountScreen },
   },
