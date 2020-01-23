@@ -18,7 +18,7 @@ class CourseItem extends PureComponent {
                 flexDirection: "row",
                 backgroundColor: "#FFF",
                 borderRadius: 40,
-                margin: 10,
+                margin: 7,
                 shadowColor: "#000",
                 shadowOffset: {
                 width: 0,
@@ -68,12 +68,12 @@ class CourseItem extends PureComponent {
 class CourseScreen extends PureComponent {
   render() {
     return (
-        <SafeAreaView>
+        // <SafeAreaView>
         <ScrollView>
             <View style={{backgroundColor: "#456", height: 250}}></View>
            
-            <View style={{position: "relative"}}>
-                <View style={{height: 160, top: -50 ,alignItems: "center", marginLeft: 20, marginRight: 20, backgroundColor: "#fff"}}>
+            <View style={{position: "relative", backgroundColor: "#f7fbfe"}}>
+                <View style={styles.shadowBox}>
                     <Text>Xin caho</Text>
                 </View>
                 <CourseItem></CourseItem>
@@ -82,13 +82,30 @@ class CourseScreen extends PureComponent {
                 <CourseItem></CourseItem>
            </View>
         </ScrollView>
-        </SafeAreaView>
+        // </SafeAreaView>
     
     );
   }
 }
 
 const styles = StyleSheet.create({
-  
+  shadowBox: {
+    height: 160,
+    borderRadius: 14, 
+    top: -50 ,
+    alignItems: "center", 
+    marginLeft: 20, 
+    marginRight: 20, 
+    backgroundColor: "#fff",
+    shadowColor: "#000",
+    shadowOffset: {
+    width: 0,
+    height: 5,
+    },
+    shadowOpacity: 0.26,
+    shadowRadius: 6.68,
+
+    elevation: 8,
+  }
 });
 export default CourseScreen;
