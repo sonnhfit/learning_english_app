@@ -10,7 +10,9 @@
 import React, {PureComponent} from 'react';
 import AppNavigation from './src/navigation/AppNavigation';
 import NavigationService from './src/services/NavigationService';
+import Icon from 'react-native-vector-icons/MaterialIcons'
 
+Icon.loadFont();
 
 
 export default class App extends PureComponent {

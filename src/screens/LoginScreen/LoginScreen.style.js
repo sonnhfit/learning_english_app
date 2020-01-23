@@ -8,19 +8,21 @@ containerView: {
   flex: 1,
   backgroundColor: '#282c5c',
 },
-loginScreenContainer: {
-  flex: 1,
-},
+// loginScreenContainer: {
+//   flex: 1,
+// },
 logoText: {
   fontSize: 40,
   fontWeight: "800",
   marginTop: 150,
   marginBottom: 30,
   textAlign: 'center',
+  color: "#fff",
 },
-loginFormView: {
-  flex: 1
-},
+// loginFormView: {
+//   flex: 1,
+ 
+// },
 loginFormTextInput: {
   height: 43,
   fontSize: 14,
@@ -40,7 +42,11 @@ loginButton: {
   backgroundColor: '#3897f1',
   borderRadius: 5,
   height: 45,
-  marginTop: 10,
+  paddingLeft: 10,
+  marginLeft: 15,
+  marginRight: 15,
+  marginTop: 5,
+  marginBottom: 5,
 },
 fbLoginButton: {
   height: 45,
