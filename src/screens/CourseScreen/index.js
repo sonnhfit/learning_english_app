@@ -17,7 +17,10 @@ class CourseItem extends PureComponent {
                 flex: 1,
                 flexDirection: "row",
                 backgroundColor: "#FFF",
-                borderRadius: 40,
+                borderRadius: 20,
+                paddingLeft: 10,
+                paddingTop: 5,
+                paddingBottom: 5,
                 margin: 7,
                 shadowColor: "#000",
                 shadowOffset: {
