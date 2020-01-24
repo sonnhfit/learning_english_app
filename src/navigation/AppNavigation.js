@@ -8,18 +8,8 @@ import CourseScreen from '../screens/CourseScreen';
 import React from 'react';
 import { Button, Text, View } from 'react-native';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
-import Icon from 'react-native-vector-icons/MaterialIcons'
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
-class Home1Screen extends React.Component {
-    render() {
-      return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <Text>Home!</Text>     
-        </View>
-        
-      );
-    }
-  }
   
   class SettingsScreen extends React.Component {
     render() {
@@ -33,7 +23,7 @@ class Home1Screen extends React.Component {
 
 const AuthenticationNavigator = createBottomTabNavigator(
   {
-      Home: { screen: Home1Screen },
+      Home: { screen: HomeScreen },
       'Học tập': { screen: CourseScreen },
       'Cùng bạn': { screen: SettingsScreen },
       'Tài khoản': { screen: AccountScreen },
