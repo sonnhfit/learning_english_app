@@ -4,28 +4,19 @@ import LoginScreen from '../screens/LoginScreen';
 import HomeScreen from '../screens/HomeScreen';
 import AccountScreen from '../screens/AccountSceen';
 import CourseScreen from '../screens/CourseScreen';
+import TestScreen from '../screens/TestScreen';
 
 import React from 'react';
 import { Button, Text, View } from 'react-native';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-  
-  class SettingsScreen extends React.Component {
-    render() {
-      return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <Text>Settings!</Text>
-        </View>
-      );
-    }
-  }
 
 const AuthenticationNavigator = createBottomTabNavigator(
   {
       Home: { screen: HomeScreen },
       'Học tập': { screen: CourseScreen },
-      'Cùng bạn': { screen: SettingsScreen },
+      'Kiểm tra': { screen: TestScreen },
       'Tài khoản': { screen: AccountScreen },
   },
   {
@@ -38,8 +29,8 @@ const AuthenticationNavigator = createBottomTabNavigator(
           }else if(routeName === 'Học tập') {
               iconName = 'school';
           }
-          else if(routeName === 'Cùng bạn') {
-            iconName = 'people';
+          else if(routeName === 'Kiểm tra') {
+            iconName = 'book';
           }
           else if(routeName === 'Tài khoản') {
             iconName = 'account-circle';

@@ -36,7 +36,7 @@ class HomeScreen extends PureComponent {
               paddingTop: 20, fontWeight: "400"
               }}>1 BV </Text>
           </View>
-          <View>
+          <View style={{ marginTop: 100}}>
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} >
             <View style={{flex:1, flexDirection:'column', width: Device_Width-50,
             margin: 10,
@@ -47,7 +47,6 @@ class HomeScreen extends PureComponent {
             },
             shadowOpacity: 0.26,
             shadowRadius: 6.68,
-
             elevation: 8,
           }}>
              
@@ -58,8 +57,22 @@ class HomeScreen extends PureComponent {
                   <View style={{backgroundColor: "#456", height: 350,
                   borderBottomLeftRadius: 40, borderBottomRightRadius: 40
                 }}>
-                  <Text style={{ color: "#FFF"}}>Bảo hiểm cơ bản</Text>
-                  <Text style={{ color: "#FFF"}}>Khoá học cung cấp kiến thức cơ bản về bảo hiểm, và thi chứng chỉ hành nghề bán bảo hiếm</Text>
+                  <Text style={{ color: "#FFF",
+                  fontWeight: "700", fontSize: 30,
+                  paddingHorizontal: 20,
+                  paddingTop: 20
+                }}>Bảo hiểm cơ bản</Text>
+                  <Text style={{ color: "#FFF",
+                  paddingHorizontal: 20,
+                  marginTop: 10
+                }}>Khoá học cung cấp kiến thức cơ bản về bảo hiểm, và thi chứng chỉ hành nghề bán bảo hiếm</Text>
+
+                <View style={{borderTopWidth: 0.5, padding: 10, paddingHorizontal:40, marginTop: 150, borderTopColor: "#FFF"}}>
+                  <Text style={{color: "#FFF", fontSize: 24, fontWeight: "600"}}>Học tiếp</Text>
+                </View>
+                <View style={{borderTopWidth: 0.5, padding: 10,paddingHorizontal:40, borderTopColor: "#FFF"}}>
+                  <Text style={{color: "#FFF", fontSize: 24, fontWeight: "600"}}>Kiểm tra</Text>
+                </View>
               </View>
            
             </View>
@@ -69,7 +82,6 @@ class HomeScreen extends PureComponent {
                     <Text>Header</Text>
                   </View>
                   <View style={{backgroundColor: "#443", height: 300}}>
-
                   </View>
               </View>
            
